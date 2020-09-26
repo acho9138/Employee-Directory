@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import TitleBanner from './components/TitleBanner.js';
+import EmployeeList from './components/EmployeeList.js';
 
 function App() {
   return (
-    <TitleBanner />
+    <>
+      <TitleBanner />
+      <EmployeeList />
+    </>
   );
 }
 
