@@ -1,7 +1,6 @@
 import React from 'react';
-import SearchForm from './SearchForm.js';
 
-function TitleBanner() {
+function TitleBanner(props) {
   return (
     <div className="jumbotron jumbotron-fluid">
       <div className="container">
@@ -9,7 +8,19 @@ function TitleBanner() {
         <p className="lead">Search for specific employees</p>
         <div className="row">
           <div className="col-md-6">
-            <SearchForm />
+            <form>
+              <div className="form-group">
+                <input
+                  onChange={props.handleSearch}
+                  value={props.value}
+                  name="search"
+                  type="text"
+                  className="form-control"
+                  placeholder="Search"
+                  id="search"
+                />
+              </div>
+            </form>
           </div>
         </div>
       </div>
