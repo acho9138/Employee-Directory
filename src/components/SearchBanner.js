@@ -16,7 +16,7 @@ function TitleBanner(props) {
                   name="search"
                   type="text"
                   className="form-control"
-                  placeholder="Search"
+                  placeholder="Search by Name"
                   id="search"
                 />
               </div>

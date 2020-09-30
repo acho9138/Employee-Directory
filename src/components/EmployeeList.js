@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { data } from '../utils/Data';
 import CaretButton from './CaretButton';
 
 const EmployeeList = ({ searchTerm }) => {
   const [employees, setEmployees] = useState([...data]);
   const [currentCategory, setCurrentCategory] = useState("");
+
+  useEffect(() => {
+    const filterEmployees = [...data].filter((item) => {
+      return item.name.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0
+    });
+    setEmployees(filterEmployees)
+  }, [searchTerm])
 
   const sortEmployees = (category) => {
     let sortedEmployees
