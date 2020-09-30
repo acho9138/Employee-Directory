@@ -1,6 +1,6 @@
 # Employee-Directory
 
-![GitHub License](https://img.shields.io/badge/License-APACHE%202.0-blue.svg)
+![GitHub License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Description
 
